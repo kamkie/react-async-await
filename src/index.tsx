@@ -9,10 +9,10 @@ function App() {
   const [state, setState] = React.useState([]);
   const append = (message: string) => {
     console.log(message);
-    setState(aaa => [...aaa, message]);
+    setState(messages => [...messages, message]);
   };
 
-  const aaa = async (num: number, delayTime: number) => {
+  const example = async (num: number, delayTime: number) => {
     append(`async${num} started`);
     await wait(delayTime);
     append(`after wait ${num}`);
@@ -22,17 +22,17 @@ function App() {
 
   const run = async () => {
     append("async0 started");
-    aaa(1, 2500);
-    await aaa(2, 500);
-    aaa(3, 1500);
+    example(1, 2500);
+    await example(2, 500);
+    example(3, 1500);
     append("async 0 ended");
   };
 
   const run2 = async () => {
     append("async0 started");
-    await aaa(1, 1500);
-    await aaa(2, 500);
-    aaa(3, 1500);
+    await example(1, 1500);
+    await example(2, 500);
+    example(3, 1500);
     append("async 0 ended");
   };
 
