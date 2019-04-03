@@ -36,6 +36,14 @@ function App() {
     append("async 0 ended");
   };
 
+  const run3 = async () => {
+    append("async0 started");
+    [1, 2, 3].reduce((acc, v) => {
+      append(`acc=${acc}`);
+      return `${acc},${v}`;
+    }, "");
+  };
+
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
@@ -43,6 +51,7 @@ function App() {
       <button onClick={() => setState([])}>clear</button>
       <button onClick={run}>run</button>
       <button onClick={run2}>run2</button>
+      <button onClick={run3}>run3</button>
       <ul>
         {state.map(e => (
           <li>{e}</li>
