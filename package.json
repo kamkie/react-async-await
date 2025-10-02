@@ -5,12 +5,12 @@
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
-    "react": "19.1.1",
+    "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "@types/react": "19.1.16",
+    "@types/react": "19.2.0",
     "@types/react-dom": "19.2.0",
     "typescript": "5.9.3"
   },
